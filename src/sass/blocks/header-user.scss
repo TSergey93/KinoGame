@@ -1,0 +1,156 @@
+.user-block {
+    box-sizing: border-box;
+    width: 205px;
+    position: relative;
+    padding: 10px 6px 6px 7px;
+    background: url("../img/user_border.png") no-repeat, linear-gradient(to bottom, transparent 40px, #000 43px, #0b0d07 44px, #0d0d0d 60%, #161a0e 85%, #232b0e 100%);
+    background-size: 100% 234px;
+    border-radius: 2%;
+
+    @media (max-width: 1000px) {
+        order: 2;
+        height: 34px;
+        margin-left: 10px;
+        padding-top: 2px;
+        background: url("../img/user_border.png") no-repeat, linear-gradient(to bottom, #0b0d07 0%, #0d0d0d 60%, #161a0e 85%, #232b0e 100%);
+        background-size: 100% 100%;
+        transition: height 0.3s linear;
+
+        &:hover {
+            height: 223px;
+
+            & .user-block__wrapper {
+                top: 30px;
+            }
+        }
+    }
+
+    @media #{$mobile-width} {
+        width: 140px;
+        height: 28px;
+        position: relative;
+        padding-top: 1px;
+        transition: width .3s linear, height .3s .3s linear;
+
+        &:hover {
+            width: 205px;
+            height: 220px;
+
+            & .user-block__wrapper {
+                top: 27px;
+            }
+        }
+    }
+}
+
+.user-block__caption-wrapper {
+    position: relative;
+    background: #25280d url("../img/login_caption_background.png") no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+
+    @media (max-width: 1000px) {
+        z-index: 1;
+    }
+}
+
+.user-block__caption {
+    display: inline-block;
+    margin: 3px auto 4px;
+    padding-right: 10px;
+    background: linear-gradient(to bottom, #a2c850 0%, #67861d 80%, #7f9833 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font: 20px/1.2 MicrosoftYaHei, sans-serif;
+    text-transform: uppercase;
+    color: #338fae;
+
+    &--gradient {
+        display: inline-block;
+        background: linear-gradient(to bottom, #bcd673 0%, #7f9b45 50%, #b7d16f 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        &::after {
+            content: "";
+            display: inline-block;
+            background: linear-gradient(to bottom, #bcd673 0%, #7f9b45 50%, #b7d16f 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    @media #{$mobile-width} {
+        padding-right: 0;
+        font-size: 16px;
+    }
+}
+
+.user-block__wrapper {
+    @media (max-width: 1000px) {
+        width: 195px;
+        position: absolute;
+        top: -142px;
+        transition: top 0.3s linear;
+    }
+
+    @media #{$mobile-width} {
+        top: -230px;
+        transition: top .3s .3s linear;
+    }
+}
+
+input[type="text"], input[type="password"] {
+    display: block;
+    box-sizing: border-box;
+    width: 175px;
+    margin: 10px auto;
+    padding: 11px 10px;
+    background: #080808 url("../img/user_input_outline.png") no-repeat;
+    border: none;
+    font: 12px/1.2 SimSun, serif;
+    color: #7eb347;
+}
+
+input[type="password"] {
+    margin-bottom: 3px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.user-block__remember {
+    @include user-checkbox ();
+}
+
+.user-block__pw {
+    @include user-checkbox ();
+}
+
+.user-block__login {
+    display: inline-block;
+    position: absolute;
+    bottom: 65px;
+    right: 18px;
+    padding: 7px 9px 7px 12px;
+    background: radial-gradient(ellipse closest-side at 25px 25px, hsla(360, 100%, 100%, 0.25), #161616);
+    border-radius: 10%;
+    box-shadow: inset 0px 15px 10px -12px #1e1f1e;
+    font: 12px/1.2 SimSun, serif;
+    color: #aad165;
+
+    @media (max-width: 1000px) {
+        bottom: 44px;
+    }
+}
+
+.user-block__faq {
+    @include user-links ();
+    margin-left: 8px;
+}
+
+.user-block__make {
+    @include user-links ();
+    margin-left: 10px;
+}

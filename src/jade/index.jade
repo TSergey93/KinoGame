@@ -1,0 +1,67 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title KinoGame
+        link(rel="stylesheet" href="css/style.css?rev=@@hash")
+    body
+        header.page-header
+            nav.header-nav
+                div.header-nav__caption-wrapper
+                    span.header-nav__caption Main&nbsp;
+                        span.header-nav__caption--gradient menu
+                ul.header-nav__list
+                    li.header-nav__item: a.header-nav__link(href="#") Create Account
+                    li.header-nav__item: a.header-nav__link(href="#") Forum
+                    li.header-nav__item: a.header-nav__link(href="#") Donate
+                    li.header-nav__item: a.header-nav__link(href="#") Dota
+                    li.header-nav__item: a.header-nav__link(href="#") Changelog
+            article.header-game-block
+                img.header-game-block__image(src="img/warcraft.png" alt="")
+                div.header-game-block__writen
+                    span.header-game-block__caption Warcraft game king
+                    p.header-game-block__text Play the game again, can do what, you say is, play! Play with! What, but also...
+            article.user-block
+                div.user-block__caption-wrapper
+                    span.user-block__caption Log
+                        span.user-block__caption--gradient in
+                div.user-block__wrapper
+                    input(type="text" placeholder="Nickname")
+                    input(type="password" placeholder="Password")
+                    label.user-block__remember
+                        input(type="checkbox" name="remember")
+                        div
+                        | Remember me
+                    label.user-block__pw
+                        input(type="checkbox" name="pw")
+                        div
+                        | Pw
+                    a.user-block__login(href="#") Login
+                    a.user-block__faq(href="#") Read
+                        span.user-block__faq--light-color FAQ
+                    a.user-block__make(href="#") Make
+                        span.user-block__make--light-color ACC
+        main.page-main
+            div.page-main__wrapper
+                nav.body-nav
+                    ul.body-nav__list
+                        li.body-nav__item: a.body-nav__link(href="#") Home
+                        li.body-nav__item: a.body-nav__link(href="#") Popular Movies
+                        li.body-nav__item: a.body-nav__link(href="#") New Movies
+                        li.body-nav__item: a.body-nav__link(href="#") Best Movies
+                        li.body-nav__item: a.body-nav__link(href="#") About us
+                        li.body-nav__item: a.body-nav__link(href="#") Media
+                        li.body-nav__item: input.body-nav__search(type="search")
+                div.gallery
+                    div.gallery__block: img.gallery__image(src="img/endgame.jpg" alt="")
+                    div.gallery__block.gallery__block--margin
+                        img.gallery__image(src="img/piranha.jpg" alt="")
+                        div.gallery__annotation
+                            span.gallery__caption Piranha3D (Piranha 3-D (2010))
+                            p.gallery__text Prehistoric a volcano now formed the Havasu lake, when the earth is vibrated again, let the bottom crack a gap, also let hidden hunger kill millions of years of prehistoric fish ... 
+                    div.gallery__block: img.gallery__image(src="img/transformers.jpg" alt="")
+                    div.gallery__row.gallery__row--right
+                    div.gallery__row.gallery__row--left
+        script(type="text/javascript" src="js/main.js?rev=@@hash")
+    

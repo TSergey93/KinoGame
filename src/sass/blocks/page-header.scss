@@ -1,0 +1,13 @@
+.page-header {
+    display: flex;
+    max-width: 940px;
+    height: 234px;
+    margin: 55px auto 0;
+
+    @media (max-width: 1000px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+        margin-top: 0;
+    }
+}
